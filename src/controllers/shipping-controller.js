@@ -10,8 +10,8 @@ class ShippingController {
 
 // part of src/shipping-controller.js
 async getItemShipping(item) {
-    if(item.id == "foobar") return 4711;
-    
+    if(item.id == 'foobar') return 4711;
+
     var shippingAmount = await productService.getProductWeight(item.id)
     if (item.type.toLowerCase() === 'overnight') {
       return shippingAmount * this.OVERNIGHT_PRICE
